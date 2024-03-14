@@ -9,10 +9,24 @@ The data I propose to visualize for my project is ...
 
 The following tasks and questions will drive the visualization and interaction decisions for this project:
 
- * (insert your question or task here) How does the X vary over time?
- * (insert your question or task here) Is there any correlation between X and Y?
- * (insert your question or task here) Are there interesting spatial patterns in X?
- * (insert your question or task here) How many X are there across different Y?
+1). How does temperature vary over time?
+    We can use the line chart (Temperature over Time) to visualize the changes in average temperature across different months. This can help identify seasonal trends and extreme temperature events.
+  
+2). Is there a correlation between temperature and relative humidity?
+    The scatter plot (Temperature vs. Relative Humidity) can be used to explore the relationship between temperature and relative humidity. By analyzing the distribution of data points, you can determine if 
+    there's a negative or positive correlation between these two variables.
+    
+3). Are there interesting spatial patterns in the occurrence of fires?
+    We can use the X and Y coordinates in the dataset to create a heat map or spatial distribution plot. This visualization can help identify areas with a higher frequency of fires and any patterns related to 
+    the location of fires within the park or forest.
+  
+4). How does the area burned vary across different months?
+    The bar chart (Area Burned by Month) can be used to compare the total area burned in different months. This can help identify which months are more prone to fires and the potential impact of seasonal changes 
+     on fire occurrences.
+     
+5). How does wind speed vary over time, and does it correlate with fire occurrences?
+    The line chart (Average Wind Speed over Time) can be used to visualize changes in wind speed over time. By comparing this with the bar chart (Area Burned by Month), you can explore if there's a relationship 
+     between wind speed and the area burned by fires.
 
 ## Sketches
 
