@@ -41,8 +41,17 @@ The following tasks and questions will drive the visualization and interaction d
 
 ## Sketches
 
-(insert one or more hand-drawn sketches of interactive visualizations that you imagine)
-(describe each sketch - how is the data visualized, what are the interactions, and how do these relate to the questions/tasks)
+
+![Rough Sketch of the interactive visualization](IMG_0712.jpg)
+
+Line Chart (Temperature over Time): Located at the top left, showing how temperature varies over time.
+
+Scatter Plot (Temperature vs. Relative Humidity): Positioned at the bottom of the line chart, illustrating the relationship between temperature and relative humidity.
+
+Bar Chart (Area Burned by Month): Placed on the right side of the line chart, displaying the total area burned for each month.
+
+Line Chart (Average Wind Speed over Time): Situated below the bar chart, depicting changes in wind speed over time.
+
 
 
 ## Prototypes
