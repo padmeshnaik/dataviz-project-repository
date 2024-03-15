@@ -2,7 +2,7 @@
 
 ## Data
 
-The data I propose to visualize for my project is ...
+The data I propose to visualize for my project is a detailed set of variables from the Montesinho natural park in Portugal, capturing the dynamic interplay between meteorological conditions and forest fires. This dataset includes geographic coordinates denoting fire locations, temporal indicators, critical Fire Weather Index (FWI) components such as the Fine Fuel Moisture Code (FFMC), Duff Moisture Code (DMC), Drought Code (DC), and Initial Spread Index (ISI), as well as key weather observations like temperature, relative humidity, wind speed, and rainfall.
 
 
 ## Questions & Tasks
