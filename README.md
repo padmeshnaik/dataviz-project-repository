@@ -38,7 +38,7 @@ Line Chart (Average Wind Speed over Time): Situated below the bar chart, depicti
 
 I’ve created a proof of concept visualization of this data. It's a ... and it shows ...
 
-[![image](https://user-images.githubusercontent.com/68416/65240758-9ef6c980-daff-11e9-9ffa-e35fc62683d2.png)](https://vizhub.com/curran/eab039ad1765433cb51aad167d9deae4)
+[![image](img.png)
 
 (please put a screenshot of one or more visualizations of this dataset you already made, for previous assignments, and link to them)
 
