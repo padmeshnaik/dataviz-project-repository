@@ -36,27 +36,20 @@ Line Chart (Average Wind Speed over Time): Situated below the bar chart, depicti
 
 ## Prototypes
 
-I’ve created a proof of concept visualization of this data. It's a ... and it shows ...
+The below diagram shows a scatter plot graph and the relationship between humidity and temperature across various months. 
 
-[![image](img.png)
+![image](img.png)
 
-(please put a screenshot of one or more visualizations of this dataset you already made, for previous assignments, and link to them)
-
-You can put images into here by pasting them into issues.
-
-You can make images into links like this:
-
-```
-[![image](https://user-images.githubusercontent.com/68416/65240758-9ef6c980-daff-11e9-9ffa-e35fc62683d2.png)](https://vizhub.com/curran/eab039ad1765433cb51aad167d9deae4)
-```
-
-
-Also, you can study the [source](https://raw.githubusercontent.com/curran/dataviz-project-template-proposal/master/README.md) to figure out Markdown formatting. You can use the GitHub built-in editor to edit the document.
 
 ## Open Questions
 
-(describe any fear, uncertainty, or doubt you’re having about the feasibility of implementing the sketched system. For example, “I’m not sure where to get the geographic shapes to build a map from this data” or “I don’t know how to resolve the codes to meaningful names” … Feel free to delete this section if you’re confident.)
+I'm uncertain about the best method to accurately integrate the Fire Weather Index components into the interactive visualizations. Specifically, how to effectively represent the varying scales of the FWI components (FFMC, DMC, DC, ISI, BUI, and FWI) in a manner that is both informative and accessible to users who may not have a background in meteorology or fire science.
 
 ## Milestones
 
-(for each week, estimate what would be accomplised)
+Week 1: Data Preparation and Initial Visualization  
+Week 2: Enhancing Scatter Plot and Spatial Pattern Analysis  
+Week 3: Development of Temporal Analysis and Interaction  
+Week 4: FWI Components vs. Meteorological Conditions  
+Week 5: Integration and User Experience Improvements  
+Week 6: Final Testing and Project Review
