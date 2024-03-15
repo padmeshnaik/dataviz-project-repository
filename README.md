@@ -22,7 +22,7 @@ The following tasks and questions will drive the visualization and interaction d
 ## Sketches
 
 
-![Rough Sketch of the interactive visualization](IMG_0712.jpg)
+![Rough Sketch of the interactive visualization](IMG_0713.jpg)
 
 Line Chart (Temperature over Time): Located at the top left, showing how temperature varies over time.
 
