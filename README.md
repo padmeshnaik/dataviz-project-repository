@@ -35,12 +35,15 @@ Line Chart (Average Wind Speed over Time): Situated below the bar chart, depicti
 
 
 
-## Prototypes
+## Graphs
 
-The below diagram shows a scatter plot graph and the relationship between humidity and temperature across various months. 
+The below diagram shows a scatter plot graph and the relationship between humidity and temperature. 
 
-![image](img.png)
+![image](graph1.png)
 
+The below diagram shows a scatter plot graph and the relationship between Area and Months. 
+
+![image](graph2.png)
 
 ## Open Questions
 
