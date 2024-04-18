@@ -23,7 +23,7 @@ The following tasks and questions will drive the visualization and interaction d
 ## Sketches
 
 
-![Rough Sketch of the interactive visualization](IMG_0713.jpg)
+![Rendering the Montisenho Natural Park using GEOJSON](Montisenho.png)
 
 Line Chart (Temperature over Time): Located at the top left, showing how temperature varies over time.
 
