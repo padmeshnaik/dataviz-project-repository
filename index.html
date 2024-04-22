@@ -1,0 +1,181 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Montesinho Natural Park</title>
+    <link rel="stylesheet" href="style.css" />
+    <style>
+      /* Additional inline CSS for clarity */
+      #mapContainer {
+        display: flex;
+        align-items: flex-start;
+      }
+      #svgMap {
+        flex-shrink: 0;
+      }
+      #infoDialog {
+        display: none;
+        position: absolute;
+        background: white;
+        border: 2px solid #007bff; /* brighter border color */
+        padding: 15px;
+        border-radius: 8px; /* rounded corners */
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* subtle shadow */
+        z-index: 10; /* ensure it's on top */
+        pointer-events: none; /* allows clicking on items behind the dialog */
+      }
+      #controls {
+        display: flex;
+        flex-direction: column;
+        margin-left: 20px;
+      }
+      .graphContainer {
+        display: none; /* Hide graphs initially */
+        margin-top: 20px;
+      }
+      .highlighted {
+        fill: red; /* Color for highlighting */
+        opacity: 0.5;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Montesinho Natural Park</h1>
+
+    <div id="mapContainer">
+      <!-- SVG container for the D3 map -->
+      <svg id="svgMap" width="900" height="600"></svg>
+      <div id="infoDialog">Information Box</div>
+
+      <div id="buttonsContainer">
+        <button id="showColumnsBtn">
+          Show Column Names
+        </button>
+        <div id="columnNamesDialog" style="display: none">
+          <h3>Column Names</h3>
+          <ul id="columnNamesList"></ul>
+        </div>
+
+        <button id="showTempVsRhBtn">
+          Show Temperature vs. RH
+        </button>
+        <div
+          class="graphContainer"
+          id="tempVsRhGraphContainer"
+        >
+          <svg
+            id="tempVsRhGraph"
+            width="600"
+            height="400"
+          ></svg>
+        </div>
+
+        <button id="showMonthAreaBtn">
+          Show Month vs. Area
+        </button>
+        <div
+          class="graphContainer"
+          id="monthAreaGraphContainer"
+        >
+          <svg
+            id="monthAreaGraph"
+            width="600"
+            height="400"
+          ></svg>
+        </div>
+      </div>
+    </div>
+
+    <!-- Temperature display container -->
+    <div id="temperatureDisplay"></div>
+
+    <!-- Include D3.js -->
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <script>
+      const svg = d3.select('#svgMap');
+      const infoBox = d3.select('#infoDialog');
+      const numRows = 9;
+      const numCols = 9;
+      const cellWidth = svg.attr('width') / numCols;
+      const cellHeight = svg.attr('height') / numRows;
+
+      // Drawing the grid
+      svg.selectAll('rect').remove(); // Clear previous rectangles if any
+      for (let i = 0; i < numRows; i++) {
+        for (let j = 0; j < numCols; j++) {
+          svg
+            .append('rect')
+            .attr('x', j * cellWidth)
+            .attr('y', i * cellHeight)
+            .attr('width', cellWidth)
+            .attr('height', cellHeight)
+            .attr('stroke', '#aaa')
+            .attr('fill', 'transparent')
+            .attr('id', `cell-${i}-${j}`)
+            .attr('class', '') // Reset class
+            .on('click', function () {
+              // Remove highlight from all cells
+              svg
+                .selectAll('rect')
+                .classed('highlighted', false);
+              // Highlight the clicked cell
+              d3.select(this).classed('highlighted', true);
+              fetchAndDisplayData(i, j, this);
+            });
+        }
+      }
+
+      function fetchAndDisplayData(x, y, element) {
+        d3.csv('data.csv').then((data) => {
+          const filteredData = data.filter(
+            (d) => d.X == x && d.Y == y,
+          );
+          const totalTemp = d3.sum(filteredData, (d) =>
+            parseFloat(d.temp),
+          );
+          const totalArea = d3.sum(filteredData, (d) =>
+            parseFloat(d.area),
+          );
+          const totalWind = d3.sum(filteredData, (d) =>
+            parseFloat(d.wind),
+          );
+          const totalRH = d3.sum(filteredData, (d) =>
+            parseFloat(d.RH),
+          );
+
+          const avgTemp = (
+            totalTemp / filteredData.length
+          ).toFixed(2);
+          const avgArea = (
+            totalArea / filteredData.length
+          ).toFixed(2);
+          const avgWind = (
+            totalWind / filteredData.length
+          ).toFixed(2);
+          const avgRH = (
+            totalRH / filteredData.length
+          ).toFixed(2);
+
+          // Calculate position for the dialog box to avoid being off-screen
+          const rect = element.getBoundingClientRect();
+          const infoX = rect.x + window.scrollX;
+          const infoY =
+            rect.y +
+            window.scrollY -
+            infoBox.node().offsetHeight -
+            10; // Above the cell
+
+          infoBox
+            .style('display', 'block')
+            .style('left', `${infoX}px`)
+            .style('top', `${infoY}px`)
+            .html(
+              `Grid (${x},${y})<br>Average Temp: ${avgTemp}°C<br>Average Area: ${avgArea} ha<br>Average Wind: ${avgWind} mm<br>Average RH: ${avgRH}%`,
+            );
+        });
+      }
+    </script>
+
+    <!-- Include TopoJSON if needed -->
+    <script src="index.js" type="module"></script>
+  </body>
+</html>

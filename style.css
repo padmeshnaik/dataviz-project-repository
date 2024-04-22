@@ -1,0 +1,66 @@
+/* New styles for button container and buttons */
+#buttonsContainer {
+  position: absolute;
+  top: 30%;
+  right: 500px;
+  transform: translateY(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+#buttonsContainer button {
+  background-color: #4caf50; /* Green shade for better visual appeal */
+  color: #fff; /* White text color for better contrast */
+  padding: 12px 15px;
+  margin: 10px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 1em; /* Ensuring text size is appropriate */
+  font-weight: bold; /* Making text bold */
+  text-shadow: 0px 1px 0px #2f6627; /* Adding text shadow for depth */
+}
+
+#buttonsContainer button:hover {
+  background-color: #2f2f27;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Slightly darker shadow on hover for more depth */
+  transform: translateY(
+    -2px
+  ); /* Slight lift effect on hover */
+}
+
+#temperatureDisplay {
+  font-family: 'Arial', sans-serif;
+  color: #333;
+  padding: 10px;
+  margin-top: 20px;
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  font-size: 1.2em;
+  width: auto;
+  display: inline-block;
+}
+
+#columnNamesDialog {
+  position: absolute;
+  top: 20px;
+  left: 300px;
+  background-color: white;
+  border-radius: 10px;
+  border: 1px solid black;
+  padding: 10px;
+  z-index: 100;
+}
+
+#tempVsRhGraph {
+  position: absolute;
+  top: 200px;
+}
+
+#monthAreaGraph {
+  position: absolute;
+}
