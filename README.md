@@ -34,8 +34,11 @@ The following tasks and questions will drive the visualization and interaction d
 
 ## Sketches
 
+The initial map rendering of Montesinho Natural Park, leveraging GEOJSON data, is instrumental in identifying fire locations and understanding spatial distributions.
 
 ![Rendering the Montisenho Natural Park using GEOJSON](montisenho.png)
+
+Additionally, the map embellished with grid lines offers an enhanced perspective of the park’s layout, potentially revealing spatial correlations with fire events.
 
 ![Rendering the Montisenho Natural Park with grid lines](graph3.png)
 
@@ -43,17 +46,17 @@ The following tasks and questions will drive the visualization and interaction d
 
 ## Graphs
 
-The below diagram shows a scatter plot graph and the relationship between humidity and temperature. 
+The subsequent scatter plot delineates the relationship between humidity and temperature, a crucial aspect in fire behavior analysis.
 
 ![image](graph1.png)
 
-The below diagram shows a scatter plot graph and the relationship between Area and Months. 
+Another graph showcases the relationship between the area affected by fires and the month of occurrence, highlighting potential seasonal trends
 
 ![image](graph2.png)
 
 ## Open Questions
 
-I'm uncertain about the best method to accurately integrate the Fire Weather Index components into the interactive visualizations. Specifically, how to effectively represent the varying scales of the FWI components (FFMC, DMC, DC, ISI, BUI, and FWI) in a manner that is both informative and accessible to users who may not have a background in meteorology or fire science.
+Integrating FWI components into the visualization remains a complex task. I aim to present these various components—differing in scale and relevance—intuitively, ensuring the information is digestible for users regardless of their background in fire science or meteorology.
 
 ## Milestones
 
