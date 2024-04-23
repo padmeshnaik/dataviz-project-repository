@@ -29,8 +29,6 @@ The following tasks and questions will drive the visualization and interaction d
   
 3). How does the area burned vary across different months?  
 
-4). How does the Fire Weather Index (FWI) components vary with meteorological conditions(temperature, relative humidity, rain, and wind)?
-
 
 ## Sketches
 
