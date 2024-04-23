@@ -32,6 +32,10 @@ The following tasks and questions will drive the visualization and interaction d
 
 ## Sketches
 
+![Rough Sketch of the interactive visualization](IMG_0713.jpg)
+
+![image](img.png)
+
 The initial map rendering of Montesinho Natural Park, leveraging GEOJSON data, is instrumental in identifying fire locations and understanding spatial distributions.
 
 ![Rendering the Montisenho Natural Park using GEOJSON](montisenho.png)
