@@ -45,6 +45,8 @@ Bar Chart (Area Burned by Month): Placed on the right side of the line chart, di
 
 Line Chart (Average Wind Speed over Time): Situated below the bar chart, depicting changes in wind speed over time.
 
+![Rendering the Montisenho Natural Park with grid lines](graph3.png)
+
 
 
 ## Graphs
