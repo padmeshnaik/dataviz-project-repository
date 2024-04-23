@@ -37,14 +37,6 @@ The following tasks and questions will drive the visualization and interaction d
 
 ![Rendering the Montisenho Natural Park using GEOJSON](montisenho.png)
 
-Line Chart (Temperature over Time): Located at the top left, showing how temperature varies over time.
-
-Scatter Plot (Temperature vs. Relative Humidity): Positioned at the bottom of the line chart, illustrating the relationship between temperature and relative humidity.
-
-Bar Chart (Area Burned by Month): Placed on the right side of the line chart, displaying the total area burned for each month.
-
-Line Chart (Average Wind Speed over Time): Situated below the bar chart, depicting changes in wind speed over time.
-
 ![Rendering the Montisenho Natural Park with grid lines](graph3.png)
 
 
